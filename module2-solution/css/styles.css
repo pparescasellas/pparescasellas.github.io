@@ -1,0 +1,96 @@
+/**** Base styles ****/
+
+* {
+  box-sizing: border-box;    /* border-box everywhere */
+  margin: 0;                 /* Reset margin. */
+  padding: 0;                /* Reset padding. */
+}
+
+body {
+  font-size: 16px;           /* Default text size */
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 10px;              /* A little margin all around the body. */
+}
+
+h1 {
+  margin-bottom: 15px;       /* Additional spacing at the bottom. */
+  text-align: center;        /* Aligned in the middle. */
+  font-size: 1.75rem;        /* 75% larger than the font size of the dummy text. */
+}
+
+h2 {
+  font-size: 1.25rem;        /* 25% larger than the font size of the dummy text. */
+}
+
+.title-region {
+  float: right;              /* Float the whole region to the right. */
+  margin: 0 0 10px 0;        /* Some margin at the bottom, to separate the region from the text. */
+  padding: 10px 30px;        /* Some padding around the central element (the h2s, in this case). */
+  text-align: center;        /* Text aligned in the middle. */
+  border: 1px solid #000000; /* Black solid border 1px wide. */
+}
+
+#chicken {
+  background-color: #D59898; /* Background color of the chicken title. */
+  color: #000000;            /* Text color of the chicken title. */
+}
+
+#beef {
+  background-color: #C14543; /* Background color of the beef title. */
+  color: #FFFFFF;            /* Text color of the beef title. */
+}
+
+#sushi {
+  background-color: #E5D198; /* Background color of the sushi title. */
+  color: #000000;            /* Text color of the sushi title. */
+}
+
+section {
+  background-color: #999999; /* The same background color for all the sections. */
+  margin: 10px;              /* Margins around the sections. */
+  border: 1px solid #000000; /* Black solid border 1px wide. */
+}
+
+p {
+  clear: right;              /* Clear right elements (the .title-region in this case). */
+  margin: 10px;              /* Some margin around the paragraphs. */
+  padding: 5px;              /* A little bit of padding. */
+  text-align: justify;       /* Justified text just to make it look nicer. */
+}
+
+/**** Responsive styles ****/
+
+.row {
+  width: 100%;
+}
+
+/* Large devices only - desktop (width of the browser window is 992px and above). */
+@media (min-width: 992px) {
+  .col-lg-4 {
+    float: left;             /* Floating to the left. */
+    width: 33.33%;           /* Take a third of the row. */
+  }
+}
+
+/* Medium devices only - tablet (width of the browser window is between 768px and 991px, inclusively). */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6, .col-md-12 {
+    float: left;             /* Floating to the left. */
+  }
+  .col-md-6 {
+    width: 50%;              /* Take half of the row. */
+  }
+  .col-md-12 {
+    width: 100%;             /* Take the entire row. */
+  }
+}
+
+/* Small devices only - mobile (width of the browser is equal to or less than 767px). */
+@media (max-width: 767px) {
+  .col-sm-12 {
+    float: left;             /* Floating to the left. */
+  }
+  .col-sm-12 {
+    width: 100%;             /* Take the entire row. */
+  }
+}
