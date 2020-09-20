@@ -9,7 +9,7 @@ body {
 
 /** HEADER **/
 #header-nav {
-  background-color: #5D5F61;
+  background-color: #707275;
   border-radius: 0;
   border: 0;
 }
@@ -20,7 +20,7 @@ body {
 
 .navbar-brand h1 {
   /* font-family, color */
-  color: #C14543;
+  color: #000000;
   font-size: 1.8em;
   font-variant: small-caps;
   font-weight: bold;
@@ -38,7 +38,7 @@ body {
 }
 
 #nav-list a {
-  color: #C14543;
+  color: #000000;
   text-align: center;
   font-weight: bold;
   font-size: 1.2em;
@@ -53,9 +53,22 @@ body {
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 2px solid #C14543;
+  border: 2px solid #000000;
 }
 
 .navbar-header button.navbar-toggle:hover, .navbar-header .icon-bar:hover, .navbar-header button.navbar-toggle:focus, .navbar-header .icon-bar:focus {
-  background-color: #d59898;
+  background-color: #B1B3B5;
+}
+
+section article {
+  background-color: #B1B3B5;
+  padding: 1px 10px;
+}
+
+section article p {
+  text-align: justify;
+}
+
+header h1 {
+  margin-bottom: 25px;
 }
