@@ -1,0 +1,16 @@
+{
+  "name": "module1",
+  "version": "1.0.0",
+  "description": "Module 1",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "test",
+    "lite": "lite-server"
+  },
+  "author": "Pere Parés",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
