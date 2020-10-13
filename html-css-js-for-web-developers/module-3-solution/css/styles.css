@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;  /* Bootstrap always uses this, is it necessary?*/
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: #707275;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand {
+  padding-top: 10px;
+}
+
+.navbar-brand h1 {
+  /* font-family, color */
+  color: #000000;
+  font-size: 1.8em;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222222;
+  margin: 0 auto;
+  line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+
+#nav-list a {
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#nav-list a:hover {
+  background-color: #999999;
+}
+
+#collapsable-nav {
+  border-top: 0;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 2px solid #000000;
+}
+
+.navbar-header button.navbar-toggle:hover, .navbar-header .icon-bar:hover, .navbar-header button.navbar-toggle:focus, .navbar-header .icon-bar:focus {
+  background-color: #B1B3B5;
+}
+
+section article {
+  background-color: #B1B3B5;
+  padding: 1px 10px;
+}
+
+section article p {
+  text-align: justify;
+}
+
+header h1 {
+  margin-bottom: 25px;
+}
