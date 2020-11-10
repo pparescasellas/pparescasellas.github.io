@@ -13,10 +13,15 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { DishDetailComponent } from './dish-detail/dish-detail.component';
-import { DishService } from './services/dish.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+
+import { DishService } from './services/dish.service';
+
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
     declarations: [
@@ -24,7 +29,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         MenuComponent,
         DishDetailComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        AboutComponent,
+        HomeComponent,
+        ContactComponent
     ],
     imports: [
         BrowserModule,
@@ -35,7 +43,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         MatCardModule,
         MatButtonModule,
         FlexLayoutModule,
-        FontAwesomeModule
+        AppRoutingModule
     ],
     providers: [
         DishService
