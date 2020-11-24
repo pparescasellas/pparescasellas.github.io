@@ -22,11 +22,15 @@ export class DishDetailComponent implements OnInit {
     next: string;
     commentForm: FormGroup;
     commentPreview: Comment;
+    dishcopy: Dish;
+
     @ViewChild('fform') commentFormDirective;
+
     formErrors = {
         'author': '',
         'comment': ''
     };
+
     validationMessages = {
         'author': {
             'required': 'Author Name is required.',
@@ -53,6 +57,7 @@ export class DishDetailComponent implements OnInit {
             .pipe(switchMap((params: Params) => this.dishService.getDish(params['id'])))
             .subscribe(dish => {
                 this.dish = dish;
+                this.dishcopy = dish;
                 this.setPrevNext(dish.id);
             }, errmess => this.errMess = <any>errmess);
     }
@@ -107,7 +112,16 @@ export class DishDetailComponent implements OnInit {
     public onSubmit(): void {
         let comment: Comment = this.commentForm.value;
         comment.date = new Date().toISOString();
-        this.dish.comments.push(comment);
+        this.dishcopy.comments.push(comment);
+        this.dishService.putDish(this.dishcopy)
+            .subscribe(dish => {
+                this.dish = dish;
+                this.dishcopy = dish;
+            }, errmess => {
+                this.dish = null;
+                this.dishcopy = null;
+                this.errMess = <any>errmess;
+            });
         this.commentPreview = null;
         this.commentFormDirective.resetForm(); // Back to its pristine state.
         this.commentForm.reset({
