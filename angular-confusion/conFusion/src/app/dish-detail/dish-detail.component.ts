@@ -16,6 +16,7 @@ import { Comment } from '../shared/comment';
 export class DishDetailComponent implements OnInit {
 
     dish: Dish;
+    errMess: string;
     dishIds: string[];
     prev: string;
     next: string;
@@ -53,7 +54,7 @@ export class DishDetailComponent implements OnInit {
             .subscribe(dish => {
                 this.dish = dish;
                 this.setPrevNext(dish.id);
-            });
+            }, errmess => this.errMess = <any>errmess);
     }
 
     public setPrevNext(dishId: string): void {
